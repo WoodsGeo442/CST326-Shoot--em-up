@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
 {
   private Rigidbody2D myRigidbody2D;
 
+  public ScoreSystem scoreScript;
+
   public float speed = 5;
     // Start is called before the first frame update
     void Start()
