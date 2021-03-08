@@ -73,25 +73,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1506}
     - Class: 114
-      Script: {instanceID: 1750}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 1962}
+      Script: {instanceID: 1970}
     - Class: 114
-      Script: {instanceID: 2434}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2938}
+      Script: {instanceID: 2948}
     - Class: 114
-      Script: {instanceID: 3138}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3168}
+      Script: {instanceID: 3178}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3384}
     - Class: 114
-      Script: {instanceID: 3672}
+      Script: {instanceID: 3680}
     - Class: 114
-      Script: {instanceID: 3756}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 3784}
+      Script: {instanceID: 3792}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -140,25 +140,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1506}
     - Class: 114
-      Script: {instanceID: 1578}
+      Script: {instanceID: 1586}
     - Class: 114
-      Script: {instanceID: 1956}
+      Script: {instanceID: 1964}
     - Class: 114
-      Script: {instanceID: 2414}
+      Script: {instanceID: 2170}
     - Class: 114
-      Script: {instanceID: 2434}
+      Script: {instanceID: 2424}
     - Class: 114
-      Script: {instanceID: 2938}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2988}
+      Script: {instanceID: 2948}
     - Class: 114
-      Script: {instanceID: 3138}
+      Script: {instanceID: 2998}
     - Class: 114
-      Script: {instanceID: 3388}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3784}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 27068}
+      Script: {instanceID: 3792}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -374,6 +374,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreDisplayScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -676,7 +682,7 @@ ScriptsOnlyBuild:
     className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
-      Hash: 3488bf67930116e1e0354703dd7be7ee
+      Hash: 776327cd1f7f95550e44c7bf1a5e0d16
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -788,12 +794,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AdjustTimeScale
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScoreDisplayScript
   platform: 5
   scenePathNames:
   - Assets/Scenes/ScoreDisplay.unity
