@@ -6,88 +6,73 @@ public class Enemy : MonoBehaviour
 {
     public GameObject enemyBullet;
 
-    public Transform shottingOffsetSquare;
-
     public float modifier = 1;
 
     public ScoreSystem scoreScript;
 
-    public GameObject enemySquare;
+    public EnemyFire enemyFireScript;
 
-    public GameObject enemyCircle;
+    public GameObject MainEnemy;
 
-    public GameObject enemyPentagon;
+    public GameObject OrangeEnemy;
 
-    public GameObject enemyCapsule;
+    public GameObject GreenEnemy;
+
+    public GameObject RedEnemy;
 
     public float nextShot = 1.0f;
 
+    public int EnemyFire;
+
     public float time = 0.0f;
 
-    //public int number;
+    public void Reset(){
+        MainEnemy.SetActive(true);
+        OrangeEnemy.SetActive(true);
+        GreenEnemy.SetActive(true);
+        RedEnemy.SetActive(true);
+    }
+
     // Start is called before the first frame update
-
-    void Update()
-    {
-        Fire();
-    }
-
-    void Fire()
-    {
-        time += Time.deltaTime;
-
-        if(time > nextShot)
-        {
-            nextShot += time;
-            GameObject enemyShot = Instantiate(enemyBullet, shottingOffsetSquare.position, Quaternion.identity);
-            nextShot -= time;
-            time = 0.0f;
-            Destroy(enemyShot, 3f);
-        }
-    }
-
-    public void Reset()
-    {
-        enemySquare.SetActive(true);
-        enemyCircle.SetActive(true);
-        enemyPentagon.SetActive(true);
-        enemyCapsule.SetActive(true);
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
+        //Debug.Log("Ouch!");
         if(collision.gameObject.name == "Bullet(Clone)"){
             Destroy(collision.gameObject);
             //Debug.Log(gameObject.name);
-            if(gameObject.name == "EnemySquare")
+            if(gameObject.name == "Enemy")
             {
-                enemySquare = gameObject;
-                scoreScript.GetComponent<ScoreSystem>().addScore("EnemySquare");
+                GetComponent<Animator>().SetTrigger("Death");
+                MainEnemy = gameObject;
+                scoreScript.GetComponent<ScoreSystem>().addScore("MainEnemy");
                 gameObject.SetActive(false);
             }
 
-            else if(gameObject.name == "EnemyCircle")
+            else if(gameObject.name == "OrangeEnemy")
             {
-                enemyCircle = gameObject;
-                scoreScript.GetComponent<ScoreSystem>().addScore("EnemyCircle");
+                GetComponent<Animator>().SetTrigger("OrangeDeath");
+                OrangeEnemy = gameObject;
+                scoreScript.GetComponent<ScoreSystem>().addScore("OrangeEnemy");
                 gameObject.SetActive(false);
             }
 
-            else if(gameObject.name == "EnemyPentagon")
+            else if(gameObject.name == "GreenEnemy")
             {
-                enemyPentagon = gameObject;
-                scoreScript.GetComponent<ScoreSystem>().addScore("EnemyPentagon");
+                GetComponent<Animator>().SetTrigger("GreenDeath");
+                GreenEnemy = gameObject;
+                scoreScript.GetComponent<ScoreSystem>().addScore("GreenEnemy");
                 gameObject.SetActive(false);
             }
 
-            else if(gameObject.name == "EnemyCapsule")
+            else if(gameObject.name == "RedEnemy")
             {
-                enemyCapsule = gameObject;
-                scoreScript.GetComponent<ScoreSystem>().addScore("EnemyCapsule");
+                GetComponent<Animator>().SetTrigger("RedDeath");
+                RedEnemy = gameObject;
+                scoreScript.GetComponent<ScoreSystem>().addScore("RedEnemy");
                 gameObject.SetActive(false);
             }
-            Debug.Log("Ouch!");
-        }
-      
+            //Debug.Log("Ouch!");
+            //Debug.Log(EnemyCount);
+       }
     }
 }

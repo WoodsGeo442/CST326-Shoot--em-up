@@ -10,15 +10,11 @@ public class ScoreSystem : MonoBehaviour
 
     [SerializeField] private Text hiScoreText;
 
-    [SerializeField] private Text congratsText;
-
     public float score;
 
     public float hiScore;
 
     public BarricadeScript barricadeScript;
-
-    public Enemy enemyScript;
 
     // Start is called before the first frame update
     void Start()
@@ -31,29 +27,27 @@ public class ScoreSystem : MonoBehaviour
     {
         score = 0;
         scoreText.text = "000" + score;
-        barricadeScript.GetComponent<BarricadeScript>().Reset();
-        enemyScript.GetComponent<Enemy>().Reset();
     }
 
     public void addScore(string enemyName)
     {
-        Debug.Log("Score Recorded");
-        if(enemyName == "EnemySquare")
+        //Debug.Log("Score Recorded");
+        if(enemyName == "MainEnemy")
         {
             score += 10;
         }
 
-        else if(enemyName == "EnemyCircle")
+        else if(enemyName == "OrangeEnemy")
         {
             score += 20;
         }
 
-        else if(enemyName == "EnemyPentagon")
+        else if(enemyName == "GreenEnemy")
         {
             score += 50;
         }
 
-        else if(enemyName == "EnemyCapsule")
+        else if(enemyName == "RedEnemy")
         {
             score += 100;
         }
@@ -62,11 +56,6 @@ public class ScoreSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.R))
-        {
-            RefreshScore();
-        }
-
         if(score >= 1000)
         {
             scoreText.text = "" + score;

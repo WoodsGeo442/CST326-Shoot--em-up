@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ScoreDisplayScript : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    public void StartGame()
     {
-        if (Input.GetKey(KeyCode.S))
-        {
-            SceneManager.LoadScene(1);
-        }
+        SceneManager.LoadScene(1);
     }
 }
