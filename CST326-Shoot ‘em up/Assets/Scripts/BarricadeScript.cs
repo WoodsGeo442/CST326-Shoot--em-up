@@ -21,27 +21,7 @@ public class BarricadeScript : MonoBehaviour
     public GameObject Barricade15;
     public GameObject Barricade16;
 
-    public void Reset()
-    {
-        Barricade1.SetActive(true);
-        Barricade2.SetActive(true);
-        Barricade3.SetActive(true);
-        Barricade4.SetActive(true);
-        Barricade5.SetActive(true);
-        Barricade6.SetActive(true);
-        Barricade7.SetActive(true);
-        Barricade8.SetActive(true);
-        Barricade9.SetActive(true);
-        Barricade10.SetActive(true);
-        Barricade11.SetActive(true);
-        Barricade12.SetActive(true);
-        Barricade13.SetActive(true);
-        Barricade14.SetActive(true);
-        Barricade15.SetActive(true);
-        Barricade16.SetActive(true);
-
-    }
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         gameObject.SetActive(false);
         Destroy(collision.gameObject);
